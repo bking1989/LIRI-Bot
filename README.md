@@ -27,12 +27,14 @@ Please note that each of these functions follows the same syntax:
 node liri <command>
 ```
 
+It is also worth noting that two of these features -- Spotify and Movie This -- have 'default' responses, if the user doesn't provide a search term. This can be seen in the demonstrations embedded below.
+
 ## Features
 -----
 
 ### **Spotify**
 
-One of the tasks LIRI is designed to do is run search queries using [Spotif's API](https://developer.spotify.com/documentation/web-api/). This can be done with the command `spotify-this-song`. As the command says, it will take the song name provided and run a search. Then, it will return and print out information about the song inside the console window.
+One of the tasks LIRI is designed to do is run search queries using [Spotify's API](https://developer.spotify.com/documentation/web-api/). This can be done with the command `spotify-this-song`. As the command says, it will take the song name provided and run a search. Then, it will return and print out information about the song inside the console window.
 
 Please note that, if the song has multiple words, you need to encase them in quotation marks, as demonstrated below.
 
