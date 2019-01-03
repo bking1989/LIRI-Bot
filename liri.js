@@ -136,7 +136,7 @@ const movieFn = () => {
                 fs.writeFileSync("log.txt", `LIRI Entry Log begins here!\r\n-----\r\nTitle: ${movieTitle}\r\nYear Released: ${movieYear}\r\nIMDb Rating: ${imdbRating}\r\nRotten Tomato Rating: ${rtRating}\nCountry: ${country}\nLanguage: ${movieLang}\nPlot: ${moviePlot}\nStarring: ${actors}\n-----`, "utf8");
                 console.log("\nLog file successfully created and updated!");
             } else {
-                fs.appendFileSync(path, `\r\nTitle: ${movieTitle}\r\nYear Released: ${movieYear}\r\nIMDb Rating: ${imdbRating}\r\nRotten Tomato Rating: ${rtRating}\r\nCountry: ${country}\nLanguage: ${movieLang}\nPlot: ${moviePlot}\nStarring: ${actors}\n-----`);
+                fs.appendFileSync(path, `\r\nTitle: ${movieTitle}\r\nYear Released: ${movieYear}\r\nIMDb Rating: ${imdbRating}\r\nRotten Tomato Rating: ${rtRating}\r\nCountry: ${country}\r\nLanguage: ${movieLang}\r\nPlot: ${moviePlot}\r\nStarring: ${actors}\r\n-----`);
                 console.log("\nLog file successfully updated!");
             };
         });
