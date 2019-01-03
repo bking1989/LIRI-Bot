@@ -66,6 +66,12 @@ As with the Spotify command, your movie title should be in quotations, if there 
 
 Node.js allows us to go beyond just making API calls, and allows us to run commands through reading text files. This is done using Node.js's built-in file system commands. To streamline this, LIRI is coded to run commands located in a text file labeled `random.txt`, so long as the commands are properly formatted. This is easily accessed by using the command `do-what-it-says`.
 
+The command syntax looks as followed:
+
+```
+node liri do-what-it-says
+```
+
 Please note that the demonstration below runs `cat random.txt` first to show the contents of the text file.
 
 ![Native Function](https://bking1989.github.io/LIRI-Node-App/images/nativeFunction.gif)
