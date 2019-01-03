@@ -52,6 +52,14 @@ Please note that the song name *needs* to be in quotations, if it has multiple w
 
 In addition to running song searches via Spotify, LIRI is capable of doing movie searches, as well. This is done using the [OMDb API](https://www.omdbapi.com/), which allows us to get large amounts of information about movies through a number of sites (e.g., IMDb, Rotten Tomatoes). The command for running a movie query is `movie-this`.
 
+The command syntax looks as followed:
+
+```
+node liri movie-this <Insert movie name in quotations here>
+```
+
+As with the Spotify command, your movie title should be in quotations, if there are multiple words.
+
 ![Movie Function](https://bking1989.github.io/LIRI-Node-App/images/movieFunction.gif)
 
 ### **Reading Commands from Text**
