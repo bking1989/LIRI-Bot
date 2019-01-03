@@ -34,9 +34,15 @@ It is also worth noting that two of these features -- Spotify and Movie This -- 
 
 ### **Spotify**
 
-One of the tasks LIRI is designed to do is run search queries using [Spotify's API](https://developer.spotify.com/documentation/web-api/). This can be done with the command `spotify-this-song`. As the command says, it will take the song name provided and run a search. Then, it will return and print out information about the song inside the console window.
+One of the tasks LIRI is designed to do is run search queries using [Spotify's API](https://developer.spotify.com/documentation/web-api/). This can be done with the command `spotify-this-song`. As the command says, it will take the song name provided and run a search. Then, it will return and print out information for the top five results in the search.
 
-Please note that, if the song has multiple words, you need to encase them in quotation marks, as demonstrated below.
+The command syntax looks as followed:
+
+```
+node liri spotify-this-song <Insert song name in quotations here>
+```
+
+Please note that the song name *needs* to be in quotations, if it has multiple words.
 
 ![Spotify Function](https://bking1989.github.io/LIRI-Node-App/images/spotifyFunction.gif)
 

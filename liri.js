@@ -38,10 +38,10 @@ const spotifyFn = () => {
             var path = "./log.txt";
 
             if (!fs.existsSync(path)) {
-                fs.writeFileSync("log.txt", `LIRI Entry Log begins here!\n-----\nArtist(s): ${artistName}\nSong: ${songName}\nPreview: ${preURL}\nAlbum: ${albumName}\n-----`, "utf8");
+                fs.writeFileSync("log.txt", `LIRI Entry Log begins here!\r\n-----\r\nArtist(s): ${artistName}\r\nSong: ${songName}\r\nPreview: ${preURL}\r\nAlbum: ${albumName}\r\n-----`, "utf8");
                 console.log("\nLog file successfully created and updated!");
             } else {
-                fs.appendFileSync(path, `\nArtist(s): ${artistName}\nSong: ${songName}\nPreview: ${preURL}\nAlbum: ${albumName}\n-----`);
+                fs.appendFileSync(path, `\r\nArtist(s): ${artistName}\nSong: ${songName}\r\nPreview: ${preURL}\r\nAlbum: ${albumName}\r\n-----`);
                 console.log("\nLog file successfully updated!");
             };
         });
@@ -56,20 +56,44 @@ const spotifyFn = () => {
                     return console.log("Error occurred: " + err);
                 };
 
-                var artistName = data.tracks.items[0].artists[0].name;
-                var songName = data.tracks.items[0].name;
-                var preURL = data.tracks.items[0].preview_url;
-                var albumName = data.tracks.items[0].album.name;
+                console.log(`\nHere are the top search results:\n-----`);
 
-                console.log(`\nArtist(s): ${artistName}\nSong: ${songName}\nPreview: ${preURL}\nAlbum: ${albumName}`);
+                for (var i = 0; i < 5; i++) {
+                    var artistName = data.tracks.items[i].artists[0].name;
+                    var songName = data.tracks.items[i].name;
+                    var preURL = data.tracks.items[i].preview_url || "No Preview Available";
+                    var albumName = data.tracks.items[i].album.name;
+
+                    console.log(`\nArtist(s): ${artistName}\nSong: ${songName}\nPreview: ${preURL}\nAlbum: ${albumName}`);
+                };
 
                 var path = "./log.txt";
 
                 if (!fs.existsSync(path)) {
-                    fs.writeFileSync("log.txt", `LIRI Entry Log begins here!\n-----\nArtist(s): ${artistName}\nSong: ${songName}\nPreview: ${preURL}\nAlbum: ${albumName}\n-----`, "utf8");
+                    fs.writeFileSync("log.txt", `LIRI Entry Log begins here!\r\n-----`, "utf8");
+
+                    for (var i = 0; i < 5; i++) {
+                        var artistName = data.tracks.items[i].artists[0].name;
+                        var songName = data.tracks.items[i].name;
+                        var preURL = data.tracks.items[i].preview_url || "No Preview Available";
+                        var albumName = data.tracks.items[i].album.name;
+
+                        fs.appendFileSync(path, `\r\nArtist(s): ${artistName}\r\nSong: ${songName}\r\nPreview: ${preURL}\r\nAlbum: ${albumName}\r\n`);
+                    };
+
+                    fs.appendFileSync(path, `\n-----`)
                     console.log("\nLog file successfully created and updated!");
                 } else {
-                    fs.appendFileSync(path, `\nArtist(s): ${artistName}\nSong: ${songName}\nPreview: ${preURL}\nAlbum: ${albumName}\n-----`);
+                    for (var i = 0; i < 5; i++) {
+                        var artistName = data.tracks.items[i].artists[0].name;
+                        var songName = data.tracks.items[i].name;
+                        var preURL = data.tracks.items[i].preview_url || "No Preview Available";
+                        var albumName = data.tracks.items[i].album.name;
+
+                        fs.appendFileSync(path, `\r\nArtist(s): ${artistName}\r\nSong: ${songName}\r\nPreview: ${preURL}\r\nAlbum: ${albumName}\r\n`);
+                    };
+
+                    fs.appendFileSync(path, `\n-----`)
                     console.log("\nLog file successfully updated!");
                 };
             });
