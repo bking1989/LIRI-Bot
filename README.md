@@ -44,7 +44,7 @@ node liri spotify-this-song <Insert song name in quotations here>
 
 Please note that the song name *needs* to be in quotations, if it has multiple words.
 
-![Spotify Function](https://bking1989.github.io/LIRI-Node-App/images/spotifyFn.gif)
+![Spotify Function](https://bking1989.github.io/LIRI-Node-App/images/spotifyDemo.gif)
 
  Each time the application outputs data, the results are logged in a text file called `log.txt`. This file can be found in the same directory as the other application files.
 
@@ -60,7 +60,7 @@ node liri movie-this <Insert movie name in quotations here>
 
 As with the Spotify command, your movie title should be in quotations, if there are multiple words.
 
-![Movie Function](https://bking1989.github.io/LIRI-Node-App/images/movieFn.gif)
+![Movie Function](https://bking1989.github.io/LIRI-Node-App/images/movieDemo.gif)
 
 ### **Reading Commands from Text**
 
@@ -74,7 +74,7 @@ node liri do-what-it-says
 
 Please note that the demonstration below runs `cat random.txt` first to show the contents of the text file.
 
-![Native Function](https://bking1989.github.io/LIRI-Node-App/images/nativeFn.gif)
+![Native Function](https://bking1989.github.io/LIRI-Node-App/images/nativeDemo.gif)
 
 Because the text file contained a properly formatted command for LIRI, it runs the command as though it were inputted directly by the user.
 
@@ -84,6 +84,6 @@ You may have noticed that each of the API returns included a line of text saying
 
 Here is a demonstration of this by running `cat log.txt` in order to pull it up in our console window.
 
-![Log Function](https://bking1989.github.io/LIRI-Node-App/images/logFn.gif)
+![Log Function](https://bking1989.github.io/LIRI-Node-App/images/logDemo.gif)
 
 This can be useful if the user wants to look at the results of past queries and searches.
