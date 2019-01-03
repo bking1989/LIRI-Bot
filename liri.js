@@ -108,10 +108,10 @@ const movieFn = () => {
         var path = "./log.txt";
 
         if (!fs.existsSync(path)) {
-            fs.writeFileSync("log.txt", `LIRI Entry Log begins here!\n-----\nIf you haven't watched "Mr. Nobody", then you should: http://www.imdb.com/title/tt0485947/\nIt's on Netflix!\n-----`, "utf8");
+            fs.writeFileSync("log.txt", `LIRI Entry Log begins here!\r\n-----\r\nIf you haven't watched "Mr. Nobody", then you should: http://www.imdb.com/title/tt0485947/\r\nIt's on Netflix!\r\n-----`, "utf8");
             console.log("\nLog file successfully created and updated!");
         } else {
-            fs.appendFileSync(path, `\nIf you haven't watched "Mr. Nobody", then you should: http://www.imdb.com/title/tt0485947/\nIt's on Netflix!\n-----`);
+            fs.appendFileSync(path, `\r\nIf you haven't watched "Mr. Nobody", then you should: http://www.imdb.com/title/tt0485947/\r\nIt's on Netflix!\r\n-----`);
             console.log("\nLog file successfully updated!");
         };
     } else {
@@ -133,10 +133,10 @@ const movieFn = () => {
             var path = "./log.txt";
 
             if (!fs.existsSync(path)) {
-                fs.writeFileSync("log.txt", `LIRI Entry Log begins here!\n-----\nTitle: ${movieTitle}\nYear Released: ${movieYear}\nIMDb Rating: ${imdbRating}\nRotten Tomato Rating: ${rtRating}\nCountry: ${country}\nLanguage: ${movieLang}\nPlot: ${moviePlot}\nStarring: ${actors}\n-----`, "utf8");
+                fs.writeFileSync("log.txt", `LIRI Entry Log begins here!\r\n-----\r\nTitle: ${movieTitle}\r\nYear Released: ${movieYear}\r\nIMDb Rating: ${imdbRating}\r\nRotten Tomato Rating: ${rtRating}\nCountry: ${country}\nLanguage: ${movieLang}\nPlot: ${moviePlot}\nStarring: ${actors}\n-----`, "utf8");
                 console.log("\nLog file successfully created and updated!");
             } else {
-                fs.appendFileSync(path, `\nTitle: ${movieTitle}\nYear Released: ${movieYear}\nIMDb Rating: ${imdbRating}\nRotten Tomato Rating: ${rtRating}\nCountry: ${country}\nLanguage: ${movieLang}\nPlot: ${moviePlot}\nStarring: ${actors}\n-----`);
+                fs.appendFileSync(path, `\r\nTitle: ${movieTitle}\r\nYear Released: ${movieYear}\r\nIMDb Rating: ${imdbRating}\r\nRotten Tomato Rating: ${rtRating}\r\nCountry: ${country}\nLanguage: ${movieLang}\nPlot: ${moviePlot}\nStarring: ${actors}\n-----`);
                 console.log("\nLog file successfully updated!");
             };
         });
