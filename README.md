@@ -1,6 +1,16 @@
 # LIRI-Bot
 Language Interpretation and Recognition Interface using NodeJS
 
+## Table of Contents
+-----
+- [Summary](#summary)
+- [How It Works](#how-it-works)
+- [Features](#features)
+  - [Spotify](#spotify)
+  - [Movie This](#movie-this)
+  - [Reading Commands from Text](#reading-commands-from-text)
+  - [Output Log](#output-log)
+
 ## Summary
 -----
 
