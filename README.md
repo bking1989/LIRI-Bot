@@ -1,6 +1,11 @@
 # LIRI-Bot
 Language Interpretation and Recognition Interface using NodeJS
 
+## Please Note ##
+As of 05/30/2019, the NPM package Axios was found to have a vulnerability error that opened it to DoS abuse. Until the package is patched and the vulnerability is fixed, the repo's package-lock will *not* include axios, even though it is essential to function.
+
+If you want to clone this repo and run it for yourself, you will need to manually install axios via NPM. Do so at your own risk!
+
 ## Table of Contents
 -----
 - [Summary](#summary)
